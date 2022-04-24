@@ -52,12 +52,18 @@ $row =$result->fetch_assoc();
        <h3><?php echo $row['title']?></h3>
                 <hr>
                 <h6><?php echo $row['content'] ?></h6>
+
                 <div class="card-body">
 
 
                     <a style="font-size: 10px ;color:gray"><?php echo $row['fbdate']?></a>
                     <a  style="font-size: 10px ;color:gray"><?php echo $row['category']?></a>
                 </div>
+                <nav aria-label="breadcrumb" style="float:right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page"><a href="all.php" style="text-decoration: none">返回上一页 </a></li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>

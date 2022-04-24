@@ -1,14 +1,8 @@
-<?php
-
-include ("php/function.php");
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>黑色童年blog的所有文章</title>
+    <title>黑色童年blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
 
@@ -20,33 +14,27 @@ include ("php/function.php");
 </head>
 <body>
 <?php  include "header.php"?>
-<div class="main">
+<div class="main ">
     <div class="container">
         <div class="row">
             <div class="cox-xs-12">
-
-            <?php         if ($result->num_rows > 0) {
-                    // 输出数据
-                    while ($rw = $result->fetch_assoc()) {
-
-
-?>              <?php    // $absract =strip_tags($rw['content']);
-                        $absract =mb_substr($rw['content'],0,59,"UTF-8")  ?>
-                <div class="alert alert-success p-4" role="alert">
-                    <div class="card">
-
-                         <div class="card-body">
-                             <a href="content.php?id=<?php echo $rw['id'];?>  " style="text-decoration: none" class="text-success"> <h4 class="card-title"><?php echo $rw['title']?></h4></a>
-                            <p class="card-text"> <?php echo $absract; ?> ······</p>
-                            <a style="font-size: 10px ;color:gray"><?php echo $rw['fbdate']?></a>
-                            <a  style="font-size: 10px ;color:gray"><?php echo $rw['category']?></a>
+                <div class="alert alert-success p-5" role="alert">
+                    <div class="card text-center">
+                        <div class="card-header">
+                           关于自己
                         </div>
-
+                        <div class="card-body">
+                            <h5 class="card-title">职业：在校大学生</h5>
+                            <p class="card-text">努力成为一名全栈的开发工程师！</p>
+                            <p class="card-text " style="font-size: 10px;color: gray ">技能：H5/CS3/Javascript/PHP/Mysql/jQuery/Ajax</p>
+                            <a href="https://03html.com/index.html" class="btn btn-primary">联系他吧</a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            贵在坚持，持之以恒
+                        </div>
                     </div>
                 </div>
-                <?php  }
-                    }  ?>
-
+            </div>
         </div>
     </div>
 </div>

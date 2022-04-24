@@ -18,19 +18,19 @@
     <div class="container">
         <div class="row">
             <div class="cox-xs-12">
-    <div class="alert alert-success p-5" role="alert">
-       欢迎你来到我的blog
-    </div>
-    </div>
-    </div>
+                <div class="alert alert-success p-5" role="alert">
+                    作品页面正在加速的开发中！！！！！！！！！！！！！！！！！！！！！
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="foot">
     <div class="container">
         <div class="row">
             <div class="cox-xs-12">
-    <h6 class="text-center">&copy;<?php echo date("Y")?>黑色童年</h6>
-</div>
+                <h6 class="text-center">&copy;<?php echo date("Y")?>黑色童年</h6>
+            </div>
         </div>
     </div>
 </div>
@@ -39,8 +39,8 @@
     const nav = document.querySelector('.nav-link ');
     nav.onclick = function(){
 
-   nav.classList.add("active")
-   }
+        nav.classList.add("active")
+    }
 
 
 </script>
