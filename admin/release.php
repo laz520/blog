@@ -1,3 +1,13 @@
+<?php
+session_start();
+include ("../php/config.php");
+if (isset($_SESSION['dr']) && $_SESSION['dr']== true && $_SESSION['user'] && $_SESSION['pass'])://判断Session的值是不是为空！
+$sqla = "SELECT * FROM admin WHERE user='" . $_SESSION['user'] . "'";
+$resulta = $conn->query($sqla);
+$rowa = mysqli_fetch_assoc($resulta);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,3 +95,9 @@
 </div>
 </body>
 </html>
+<?php
+else:
+    echo "<script>alert('未登入')
+window.location.href = 'login.php'
+</script>";
+endif;

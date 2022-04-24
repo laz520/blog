@@ -28,30 +28,15 @@ $row =$result->fetch_assoc();
     <link rel="stylesheet" href="css/css.css">
 </head>
 <body>
-<div class="top mb-5 ">
 
-    <div class="container">
-        <div class="row">
-
-            <div class="col-xs-12 text-center">
-                <h1 class="mt-5 mb-5"><?php echo $row['title']?></h1>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-</div>
-<div class="main p-5 mt-10">
+<div class="main p-5">
     <div class="container">
         <div class="row">
             <div class="cox-xs-12">
-       <h3><?php echo $row['title']?></h3>
-                <hr>
+                <h1 class="mt-5 "><?php echo $row['title']?></h1>
+                <hr/>
                 <h6><?php echo $row['content'] ?></h6>
+
 
                 <div class="card-body">
 
@@ -61,7 +46,7 @@ $row =$result->fetch_assoc();
                 </div>
                 <nav aria-label="breadcrumb" style="float:right">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><a href="all.php" style="text-decoration: none">返回上一页 </a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="index.php" style="text-decoration: none">返回上一页 </a></li>
                     </ol>
                 </nav>
             </div>
