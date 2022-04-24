@@ -34,7 +34,7 @@ endif;?>
 
 <div class="card text-center" >
     <div class="card-header alert alert-success">
-        <a href="../index.php" class="btn btn-primary">返回上一页</a>
+        <a href="index.php" class="btn btn-primary">返回上一页</a>
         <a href="../index.php" class="btn btn-dark">返回首页</a>
     </div>
 
@@ -51,9 +51,9 @@ endif;?>
         </thead>
         <tbody>
 
-<?php         if ($result->num_rows > 0) {
+<?php         if ($resulta->num_rows > 0) {
     // 输出数据
-    while ($rw = $result->fetch_assoc()) {
+    while ($rw = $resulta->fetch_assoc()) {
 
 
         ?>

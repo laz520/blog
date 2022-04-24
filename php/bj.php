@@ -1,6 +1,15 @@
 <?php
+session_start();
+if (isset($_SESSION['dr']))://判断Session的值是不是为空！
+
+    ?>
+<?php
+else:
+    echo "<script>alert('未登入')
+window.location.href = '../admin/login.php'
+</script>";
+endif;
 $id = $_GET['id'];
-$ida = $_GET['id'];
 include ("config.php");
 $sql = "SELECT * FROM wz  WHERE id = '$id'";
 $result = $conn->query($sql);//处理$sql变量
@@ -9,7 +18,7 @@ $rw = $result->fetch_assoc(); //从结果集中取得一行作为关联数组
 
 
 if (isset($_POST['xg']) && $_POST['xg'] == null) {
-
+   $ida= $_POST['id'];
     $title = $_POST['title'];
     $category = $_POST['category'];
     $content =$_POST['content'];
@@ -23,6 +32,7 @@ window.location.href = '../admin/dele.php';
         echo "<script>alert('修改失败')
 window.location.href = '../admin/index.php';</script>";
     }
+
 
 }
 ?>
@@ -71,7 +81,7 @@ window.location.href = '../admin/index.php';</script>";
                         <form action="bj.php" method="post">
                             <div class="row">
                                 <div class="col-xm-5">
-
+                                   <input type="text" name="id" value="<?php echo $id?>"  style="border: 0;background: 0;display: none">
                                     <input type="text" class="form-control" placeholder="文章标题"  value="<?php echo $rw['title']?>" name="title">
 
                                     <br>
@@ -95,7 +105,7 @@ window.location.href = '../admin/index.php';</script>";
                                     <br>
                                     <div class="row mb-3" >
                                         <div class="col-xs-12 text-center">
-                                            <button class="btn btn-info " style="width: 300px" name="xg">发布</button>
+                                            <button class="btn btn-info " style="width: 300px" name="xg">修改</button>
                                         </div>
                                     </div>
                         </form>
