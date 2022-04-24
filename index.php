@@ -8,7 +8,7 @@ include ("php/function.php");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>黑色童年blog的所有文章</title>
+    <title>黑色童年blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
 
@@ -34,7 +34,7 @@ include ("php/function.php");
 
                     ?>              <?php    // $absract =strip_tags($rw['content']);
                     $absract =mb_substr($rw['content'],0,59,"UTF-8")  ?>
-                    <div class="p-4 " role="alert">
+                    <div class="p-4  " role="alert">
                         <div class="card">
 
                             <div class="card-body">

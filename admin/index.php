@@ -31,6 +31,7 @@ $rowa = mysqli_fetch_assoc($resulta);
 <div class="card text-center" >
     <div class="card-header alert alert-success">
          <a href="release.php" class="btn btn-primary">发布文章</a>
+        <a href="dele.php" class="btn btn-info">查看文章</a>
         <a href="../index.php" class="btn btn-dark">返回首页</a>
         </div>
 
