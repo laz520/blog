@@ -32,7 +32,7 @@ include ("php/function.php");
                 while ($rw = $result->fetch_assoc()) {
 
 
-                    ?>              <?php    // $absract =strip_tags($rw['content']);
+                    ?>              <?php    // $absract =strip_tags($rw['content']11);
                     $absract =mb_substr($rw['content'],0,59,"UTF-8")  ?>
                     <div class="p-4  " role="alert">
                         <div class="card">
